@@ -1,0 +1,30 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <div id="table"></div>
+
+        <script type="text/javascript">
+             var opts = {
+                 url: 'http://localhost:8080/archive/'
+             };
+
+             fetch(opts)
+                 .then((res) => {
+                     if (res.ok) {
+                         return res.json();
+                     }
+                  })
+                  .then((rows) => {
+                      for (let row of rows) {
+                          // row will be a mysql row -- you can loop over these and do what you want with them
+                          var Row = document.createElement("P");
+                          Row.innerHTML = row;
+                          document.getElementById("table").appendChild(Row);
+                      }
+                   })
+                   .catch(console.log);
+        </script>
+    </body> 
+</html>
