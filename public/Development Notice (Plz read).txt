@@ -1,0 +1,5 @@
+To whoever's grading this horrible work I did
+
+In order to save some of your previous time, the program uses 'mysql' database instead of postgreSQL. I'm not sure how this differs, but the database info is dumped in the mysqldatabase folder. 
+
+In short, the program should be able to create, change, show the database and delete particular Tokimons with the given name. There is no feature 4, and the display of the database is very crude. It deserves whatever marks you give me.
